@@ -2,6 +2,7 @@ import random
 import time
 
 import markup as markup
+from aiogram.types import ReplyKeyboardMarkup
 
 from config import tg_bot_token
 from aiogram import Bot, types
@@ -17,7 +18,7 @@ markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
 @dp.message_handler(commands=["start"])
 async def start_command(message: types.Message):
     await message.answer("Hello, I`m smart password generator. I can help you to create safety password.")
-    time.sleep(2)
+    time.sleep(1)
     await message.answer("How many symbols of password do you want to create?")
 
 @dp.message_handler()

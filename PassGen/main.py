@@ -14,6 +14,8 @@ dp = Dispatcher(bot)
 
 
 reply_keyboard = [["/start"]]
+
+
 markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
 @dp.message_handler(commands=["start"])
 async def start_command(message: types.Message):
